@@ -1,29 +1,27 @@
 # Unidad 2 Graficación2D
 **Temario:**
 
-2.1. Transformación bidimensional.
+**2.1. Transformación bidimensional.**
 
-2.1.1. Traslación.
+  2.1.1. Traslación.
 
-2.1.2. Escalamiento.
+  2.1.2. Escalamiento.
 
-2.1.3. Rotación.
+  2.1.3. Rotación.
 
-2.1.4. Sesgado.
+  2.1.4. Sesgado.
 
-2.2.Representación matricial de las transformaciones
-bidimensionales.
+**2.2.Representación matricial de las transformaciones bidimensionales.**
 
+**2.3. Trazo de líneas curvas.**
 
-2.3. Trazo de líneas curvas.
+   2.3.1. Bézier.
 
-2.3.1. Bézier.
+   2.3.2. B-spline.
 
-2.3.2. B-spline.
+**2.4. Fractales.**
 
-2.4. Fractales
-
-2.5. Uso y creación de fuentes de texto.
+**2.5. Uso y creación de fuentes de texto.**
 
 # Introducción
 En el ámbito de la computación gráfica, las transformaciones bidimensionales y el manejo de elementos visuales son fundamentales para el desarrollo de aplicaciones interactivas, animaciones y sistemas de diseño digital. A través de este temario, se abordarán los conceptos esenciales que permiten manipular objetos en un plano, tales como la traslación, el escalamiento, la rotación y el sesgado, los cuales constituyen la base para modificar la posición, tamaño y orientación de figuras.
@@ -147,15 +145,65 @@ También puede medirse en radianes en contextos matemáticos.
 
 Para aplicar una rotación en Blender:
 
-Selecciona el objeto
-Presiona la tecla R (Rotate)
-Presiona X, Y o Z para elegir el eje de rotación
-Mueve el mouse para girar el objeto
-Haz clic o presiona Enter para confirmar
++ Selecciona el objeto
++ Presiona la tecla R (Rotate)
++ Presiona X, Y o Z para elegir el eje de rotación
++ Mueve el mouse para girar el objeto
++ Haz clic o presiona Enter para confirmar
 
 🧸 También puedes escribir un valor numérico (por ejemplo: R → Z → 90) para mayor precisión.
 
 ## 2.1.4. Sesgado.
+
+El sesgado es una transformación bidimensional que consiste en inclinar o deformar un objeto, desplazando sus puntos en una dirección específica. A diferencia del escalamiento o la rotación, el sesgado sí altera la forma del objeto, aunque generalmente mantiene su área.
+
+__¿Cómo funciona el sesgado?__
+
+En el sesgado, los puntos del objeto se desplazan de manera proporcional a su posición respecto a un eje.
+
+- Un eje se mantiene “fijo”
++ El otro eje se desplaza progresivamente
+- Esto genera una inclinación
+
+🧸 Es como si “empujaras” la parte superior de un objeto hacia un lado mientras la base permanece en su lugar.
+
+__Tipos de Sesgado__
+
+El sesgado puede aplicarse en diferentes direcciones dependiendo del eje que se tome como referencia. Los dos tipos principales son el sesgado en X y el sesgado en Y, y cada uno produce una deformación distinta en el objeto.
+
+**Sesgado en X (Shear en X)**
+
+El sesgado en X consiste en desplazar los puntos del objeto en dirección horizontal (eje X), mientras que su posición vertical (eje Y) se mantiene igual.
+
+__¿Cómo funciona?__
++ Cada punto del objeto se mueve hacia la derecha o izquierda
++ El desplazamiento depende de su posición en Y
++ Los puntos más “altos” o más “bajos” se mueven más o menos
+
+🧸 Es decir, el objeto se “inclina” hacia un lado.
+
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/884fa215-af7f-478f-8370-ea9eb8e60190" />
+
+
+# 2.2.Representación matricial de las transformaciones bidimensionales.
+
+En computación gráfica, las transformaciones bidimensionales como la traslación, escalamiento, rotación y sesgado pueden representarse mediante matrices. Esto permite aplicar operaciones de forma más organizada, rápida y precisa, especialmente cuando se trabajan múltiples transformaciones sobre un mismo objeto.
+
+Una matriz es una forma de organizar números en filas y columnas, y se utiliza para transformar las coordenadas de un punto. Si un punto en el plano se representa como:
+
+P(x,y)
+
+Se puede escribir como un vector:
+
+<img width="40" height="40" alt="image" src="https://github.com/user-attachments/assets/0e2b2158-4396-4d1c-9cee-e9d088f837ba" />
+
+
+Al multiplicar este vector por una matriz, obtenemos una nueva posición transformada.
+
+
+
+
+
 
 
 
